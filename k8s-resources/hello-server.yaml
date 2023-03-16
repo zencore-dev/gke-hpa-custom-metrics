@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-server
+  namespace: metrics-writer
+spec:
+  selector:
+    matchLabels:
+      app: hello-server
+  template:
+    metadata:
+      labels:
+        app: hello-server
+    spec:
+      containers:
+      - name: hello-app
+        image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:1.0
+        imagePullPolicy: IfNotPresent

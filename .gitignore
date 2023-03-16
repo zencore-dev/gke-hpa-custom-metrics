@@ -1,0 +1,3 @@
+# Exclude masOS metadata file
+.DS_Store
+
